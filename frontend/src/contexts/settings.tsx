@@ -5,6 +5,7 @@ import {
   CreateOrUpdateSetting,
   GetAllSettings,
 } from '../../wailsjs/go/backend/Backend';
+import { PageLoader } from '../components/page-loader';
 
 export type SettingsContextType = {
   settings: Setting[];
@@ -61,7 +62,7 @@ export function SettingsProvider({ children }: Props) {
 
   return (
     <SettingsContext.Provider value={memoizedValue as SettingsContextType}>
-      {children}
+      {loading ? <PageLoader /> : children}
     </SettingsContext.Provider>
   );
 }
