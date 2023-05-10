@@ -4,6 +4,7 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
     font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -15,4 +16,14 @@ body {
     font-weight: 400;
     src: local(""),
     url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
 }
