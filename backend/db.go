@@ -12,7 +12,7 @@ func InitDb() (*gorm.DB, error) {
 		return nil, err
 	}
 
-	err = db.AutoMigrate()
+	err = db.AutoMigrate(&Setting{})
 	if err != nil {
 		return nil, err
 	}
