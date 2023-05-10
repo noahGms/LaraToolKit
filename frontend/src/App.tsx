@@ -1,11 +1,14 @@
-import { MantineProvider, Text } from '@mantine/core';
 import Router from './router';
+import { SettingsProvider } from './contexts/settings';
+import { ThemeProvider } from './contexts/theme';
 
 function App() {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
-      <Router />
-    </MantineProvider>
+    <SettingsProvider>
+      <ThemeProvider>
+        <Router />
+      </ThemeProvider>
+    </SettingsProvider>
   );
 }
 
