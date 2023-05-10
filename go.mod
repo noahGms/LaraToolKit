@@ -1,4 +1,4 @@
-module changeme
+module laratoolkit
 
 go 1.18
 
