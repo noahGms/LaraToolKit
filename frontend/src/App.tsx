@@ -1,5 +1,11 @@
+import { MantineProvider, Text } from '@mantine/core';
+
 function App() {
-  return <div>Hello World</div>;
+  return (
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <Text>Hello World</Text>
+    </MantineProvider>
+  );
 }
 
 export default App;
