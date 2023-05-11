@@ -115,7 +115,7 @@ export const ProjectForm = ({ opened, project, onClose, refresh }: Props) => {
             <Alert
               title={error}
               color="red"
-              icon={<IconAlertCircle size={24} />}
+              icon={<IconAlertCircle />}
               mb={20}
               children={undefined}
             />
@@ -135,7 +135,7 @@ export const ProjectForm = ({ opened, project, onClose, refresh }: Props) => {
               rightSection={
                 <Tooltip label={'Open folder dialog'} position={'bottom'}>
                   <ActionIcon onClick={openFolderDialog}>
-                    <IconFolder size={24} />
+                    <IconFolder />
                   </ActionIcon>
                 </Tooltip>
               }

@@ -58,10 +58,7 @@ export default function Home() {
         </Flex>
         <Box mt={20}>
           {!projects.length ? (
-            <Alert
-              icon={<IconAlertCircle size={16} />}
-              title="No project found"
-            >
+            <Alert icon={<IconAlertCircle />} title="No project found">
               You {"don't"} have any project yet. Click on the button above to
               create one.
             </Alert>
