@@ -17,6 +17,7 @@ import {
 } from '../../../wailsjs/go/backend/Backend';
 import { useForm } from '@mantine/form';
 import { CreateAndUpdateProject, Project } from '../../types';
+import { showSuccessNotification } from '../../utils/notifications';
 
 interface Props {
   opened: boolean;
@@ -63,6 +64,8 @@ export const ProjectForm = ({ opened, project, onClose, refresh }: Props) => {
     if (project) {
       UpdateProject(project.id, values)
         .then((response) => {
+          showSuccessNotification(response);
+
           close();
           refresh();
         })
@@ -75,6 +78,8 @@ export const ProjectForm = ({ opened, project, onClose, refresh }: Props) => {
     } else {
       CreateProject(values)
         .then((response) => {
+          showSuccessNotification(response);
+
           close();
           refresh();
         })

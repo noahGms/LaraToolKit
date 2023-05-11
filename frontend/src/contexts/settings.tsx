@@ -5,6 +5,10 @@ import {
 } from '../../wailsjs/go/backend/Backend';
 import { PageLoader } from '../components/page-loader';
 import { Setting } from '../types';
+import {
+  showErrorNotification,
+  showSuccessNotification,
+} from '../utils/notifications';
 
 export type SettingsContextType = {
   settings: Setting[];
@@ -41,11 +45,11 @@ export function SettingsProvider({ children }: Props) {
   function setSetting(key: string, value: string) {
     CreateOrUpdateSetting(key, value)
       .then((response) => {
-        console.log('setSetting response: ', response);
+        showSuccessNotification(response);
         getAllSettings();
       })
       .catch((error) => {
-        console.log('setSetting error: ', error);
+        showErrorNotification(error);
       });
   }
 
