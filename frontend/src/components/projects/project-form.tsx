@@ -1,7 +1,4 @@
 import { useEffect, useState } from 'react';
-import { backend } from '../../../wailsjs/go/models';
-import CreateAndUpdateProject = backend.CreateAndUpdateProject;
-import Project = backend.Project;
 import {
   TextInput,
   Box,
@@ -19,6 +16,7 @@ import {
   UpdateProject,
 } from '../../../wailsjs/go/backend/Backend';
 import { useForm } from '@mantine/form';
+import { CreateAndUpdateProject, Project } from '../../types';
 
 interface Props {
   opened: boolean;
@@ -37,8 +35,10 @@ export const ProjectForm = ({ opened, project, onClose, refresh }: Props) => {
     initialValues: { ...projectInitialState },
 
     validate: {
-      name: (value) => (value.trim().length > 0 ? null : 'Name is required'),
-      path: (value) => (value.trim().length > 0 ? null : 'Path is required'),
+      name: (value: string) =>
+        value.trim().length > 0 ? null : 'Name is required',
+      path: (value: string) =>
+        value.trim().length > 0 ? null : 'Path is required',
     },
   });
   const [loading, setLoading] = useState<boolean>(false);

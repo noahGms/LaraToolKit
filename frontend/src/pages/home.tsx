@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import { backend } from '../../wailsjs/go/models';
-import Project = backend.Project;
 import { GetAllProjects } from '../../wailsjs/go/backend/Backend';
 import { PageLoader } from '../components/page-loader';
 import {
@@ -15,6 +13,7 @@ import {
 } from '@mantine/core';
 import { IconAlertCircle } from '@tabler/icons-react';
 import { ProjectForm } from '../components/projects/project-form';
+import { Project } from '../types';
 
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);

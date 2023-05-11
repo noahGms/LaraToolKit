@@ -1,11 +1,10 @@
 import { ReactNode, createContext, useEffect, useMemo, useState } from 'react';
-import { backend } from '../../wailsjs/go/models';
-import Setting = backend.Setting;
 import {
   CreateOrUpdateSetting,
   GetAllSettings,
 } from '../../wailsjs/go/backend/Backend';
 import { PageLoader } from '../components/page-loader';
+import { Setting } from '../types';
 
 export type SettingsContextType = {
   settings: Setting[];
