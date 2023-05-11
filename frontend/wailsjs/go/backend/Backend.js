@@ -6,6 +6,30 @@ export function CreateOrUpdateSetting(arg1, arg2) {
   return window['go']['backend']['Backend']['CreateOrUpdateSetting'](arg1, arg2);
 }
 
+export function CreateProject(arg1) {
+  return window['go']['backend']['Backend']['CreateProject'](arg1);
+}
+
+export function DeleteProject(arg1) {
+  return window['go']['backend']['Backend']['DeleteProject'](arg1);
+}
+
+export function GetAllProjects() {
+  return window['go']['backend']['Backend']['GetAllProjects']();
+}
+
 export function GetAllSettings() {
   return window['go']['backend']['Backend']['GetAllSettings']();
+}
+
+export function GetProject(arg1) {
+  return window['go']['backend']['Backend']['GetProject'](arg1);
+}
+
+export function OpenFolderDialog() {
+  return window['go']['backend']['Backend']['OpenFolderDialog']();
+}
+
+export function UpdateProject(arg1, arg2) {
+  return window['go']['backend']['Backend']['UpdateProject'](arg1, arg2);
 }
