@@ -26,5 +26,5 @@ func (b *Backend) CreateOrUpdateSetting(key string, value string) (string, error
 	if result.Error != nil {
 		return "", errors.New("Error creating or updating setting")
 	}
-	return setting.Value, nil
+	return "Setting updated", nil
 }
