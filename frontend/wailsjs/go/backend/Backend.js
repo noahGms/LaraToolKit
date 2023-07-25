@@ -26,8 +26,20 @@ export function GetProject(arg1) {
   return window['go']['backend']['Backend']['GetProject'](arg1);
 }
 
+export function GetProjectCommands(arg1) {
+  return window['go']['backend']['Backend']['GetProjectCommands'](arg1);
+}
+
 export function OpenFolderDialog() {
   return window['go']['backend']['Backend']['OpenFolderDialog']();
+}
+
+export function RunProjectCommands(arg1, arg2, arg3, arg4) {
+  return window['go']['backend']['Backend']['RunProjectCommands'](arg1, arg2, arg3, arg4);
+}
+
+export function SyncProjectCommands(arg1) {
+  return window['go']['backend']['Backend']['SyncProjectCommands'](arg1);
 }
 
 export function UpdateProject(arg1, arg2) {

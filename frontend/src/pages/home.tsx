@@ -14,11 +14,13 @@ import {
 import { IconAlertCircle } from '@tabler/icons-react';
 import { ProjectForm } from '../components/projects/project-form';
 import { Project } from '../types';
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [projectsLoading, setProjectsLoading] = useState<boolean>(true);
   const [projectFormOpened, setProjectFormOpened] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const openProjectForm = () => {
     setProjectFormOpened(true);
@@ -76,7 +78,7 @@ export default function Home() {
                         <Text>{project.path}</Text>
                       </Text>
 
-                      <Button variant="light" color="blue" mt="md">
+                      <Button variant="light" color="blue" mt="md" onClick={() => navigate(`/projects/${project.id}`)}>
                         Open
                       </Button>
                     </Card>
